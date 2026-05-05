@@ -1,4 +1,4 @@
-package com.fic.mobile_app_base_compose.viewmodel
+package com.fic.mobile_app_base_compose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
             MobileappbasecomposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
-                        EventCard() // Esto llama a tu pantalla de FNAF
+                        EventCard()
                     }
                 }
             }

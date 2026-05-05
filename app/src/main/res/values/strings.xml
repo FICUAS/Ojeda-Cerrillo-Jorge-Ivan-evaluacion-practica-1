@@ -7,4 +7,10 @@
     <string name="org_evento">Fazbear Entertainment</string>
     <string name="date_evento">10 may, 4:00 pm</string>
     <string name="Pay_evento">100$</string>
+
+    <string name="btn_buy">comprar</string>
+    <string name="btn_share">compratir</string>
+
+    <string name="desc_banner">imagen del evento</string>
+
 </resources>

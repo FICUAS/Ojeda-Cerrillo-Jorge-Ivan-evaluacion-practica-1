@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -84,11 +85,16 @@ fun EventCard() {
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
 
                 EventDetailItem(
+                    icon = Icons.Default.DateRange,
+                    text = stringResource(id = R.string.Pay_evento)
+                )
+
+                Spacer(modifier = Modifier.height(4.dp)) // Un espacio pequeño entre fecha y precio
+                EventDetailItem(
                     icon = Icons.Default.LocationOn,
                     text = stringResource(id = R.string.Pay_evento)
                 )
 
-                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
                 //barra de acciones
                 Row(
                     modifier = Modifier.fillMaxWidth(),
