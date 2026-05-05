@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">mobile-app-base-compose</string>
+    <string name="app_name">Evaluacion Practica 1</string>
+
+    <string name="label_badge">Destacados</string>
+    <string name="title_evento">Nuevo Remake de FNAF</string>
+    <string name="cat_evento">Trailer del juego</string>
+    <string name="org_evento">Fazbear Entertainment</string>
+    <string name="date_evento">10 may, 4:00 pm</string>
+    <string name="Pay_evento">100$</string>
 </resources>
