@@ -37,7 +37,7 @@ fun EventCard() {
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.fnaf),
-                    contentDescription = "FNAF Banner",
+                    contentDescription =  stringResource(id = R.string.desc_banner),
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize()
                 )
@@ -52,10 +52,11 @@ fun EventCard() {
                     Text(
                         text = stringResource(id = R.string.label_badge),
                         color = Color.White,
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                        style = MaterialTheme.typography.labelSmall
+                        modifier = Modifier.padding(
+                            horizontal = dimensionResource(id = R.dimen.padding_small),
+                            vertical = dimensionResource(id = R.dimen.padding_xsmall),
+                        )
                     )
-
                 }
             }
             Column(
@@ -64,49 +65,50 @@ fun EventCard() {
                 //la categorias
                 Text(
                     text = stringResource(id = R.string.cat_evento),
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.primary
                 )
                 //el titulo
 
                 Text(
                     text = stringResource(id = R.string.title_evento),
-                    style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    modifier = Modifier.padding(vertical = 4.dp)
+                    modifier = Modifier.padding(
+                        vertical = dimensionResource(id = R.dimen.padding_small)
+                    )
                 )
                 // organizador
                 Text(
                     text = stringResource(id = R.string.org_evento),
-                    style = MaterialTheme.typography.bodyMedium,
                     color = Color.Gray
                 )
 
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacer_medium)))
 
+                //fecha
                 EventDetailItem(
                     icon = Icons.Default.DateRange,
-                    text = stringResource(id = R.string.Pay_evento)
+                    text = stringResource(id = R.string.date_evento)
                 )
 
-                Spacer(modifier = Modifier.height(4.dp)) // Un espacio pequeño entre fecha y precio
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_xsmall)))
+                //ubicacion
                 EventDetailItem(
                     icon = Icons.Default.LocationOn,
-                    text = stringResource(id = R.string.Pay_evento)
+                    text = stringResource(id = R.string.location_evento)
                 )
+                Spacer(modifier = Modifier.height((dimensionResource(id = R.dimen.spacer_medium))))
 
                 //barra de acciones
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Button(onClick = {}) {
-                        Text("Comprar")
+                        Text (stringResource(id = R.string.btn_buy))
                     }
 
                     Button(onClick = {}) {
-                        Text("Compartir")
+                        Text (stringResource(id = R.string.btn_share))
                     }
                 }
             }
